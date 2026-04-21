@@ -31,6 +31,14 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - Log actual receipt totals after checkout and track variance, budget success, and trip history.
 - Includes Home, List, Search, History, and Info pages.
 
+## Azure Deployment Notes
+
+- **Recommended hosting for the current iteration**: Azure Static Web Apps. Grocery Helper is currently a static React/Vite app with localStorage persistence and no required server process.
+- **Use Azure App Service later only if needed**: choose App Service if the app adds an Express/API server, server-side scraping, scheduled jobs, server-managed Supabase access, or other long-running backend behavior.
+- **Azure Static Web Apps config**: `artifacts/grocery-helper/public/staticwebapp.config.json` is copied into the Vite build output and provides client-side route fallback for `/list`, `/search`, `/history`, and `/info`.
+- **Suggested Azure build settings from the monorepo root**: app location `artifacts/grocery-helper`, build command `pnpm --filter @workspace/grocery-helper run build`, output location `dist/public`.
+- The Vite config defaults `BASE_PATH` to `/` and `PORT` to `5173` for external builds while still honoring Replit-provided values when present.
+
 ## Key Commands
 
 - `pnpm run typecheck` — full typecheck across all packages
