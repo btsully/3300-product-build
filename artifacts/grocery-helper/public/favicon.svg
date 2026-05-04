@@ -1,3 +1,8 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="180" height="180" rx="36" fill="#FF3C00"/>
+  <rect width="180" height="180" rx="36" fill="#4F7942"/>
+  <!-- Cart body -->
+  <path d="M44 52h14l16 60h60l12-44H72" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Wheels -->
+  <circle cx="96" cy="132" r="9" fill="white"/>
+  <circle cx="130" cy="132" r="9" fill="white"/>
 </svg>
