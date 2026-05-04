@@ -1,0 +1,59 @@
+Cookie popup
+
+Accomplished
+When visitor arrives on page, cookie popup appears with appropriate text given the context. The link to the site cookie policy works correctly. Accepting the cookie policy clears the popup.
+5 pts
+
+Developing
+Cookie popup appears, but either the cookie policy link doesn't work or Accepting the policy does not clear the popup.
+3 pts
+
+Developing
+Cookie popup appears, but the cookie policy link doesn't work and Accepting the policy does not clear the popup.
+1 pts
+
+No Marks
+Cookie popup is not present.
+0 pts
+/5 pts
+Cookie policy
+
+Accomplished
+Cookie policy is present and appropriate given the context. The cookie policy is linked in the footer and works correctly. The cookie policy page passes all validations - HTML5, CSS3, and WCAG 2.1, level AA.
+5 pts
+
+Developing
+Link to cookie policy is present but doesn't work. There are screenshots showing the page passes all validation - HTML5, CSS3, and WCAG 2.1, level AA.
+2 pts
+
+Developing
+Link to cookie policy works, but the page does not pass HTML5, CSS3, and/or WCAG 2.1, level AA validation.
+1 pts
+
+No Marks
+No indication cookie policy is present.
+0 pts
+/5 pts
+Privacy policy
+
+Accomplished
+Privacy policy is present and appropriate given the context. The privacy policy is linked in the footer and works correctly. The privacy policy page passes all validations - HTML5, CSS3, and WCAG 2.1, level AA.
+5 pts
+
+Developing
+Link to privacy policy is present but doesn't work. There are screenshots showing the page passes all validation - HTML5, CSS3, and WCAG 2.1, level AA.
+2 pts
+
+Developing
+Link to privacy policy works, but the page does not pass HTML5, CSS3, and/or WCAG 2.1, level AA validation.
+1 pts
+
+No Marks
+No indication privacy policy is present.
+0 pts
+/5 pts
+Terms & conditions policy
+
+Accomplished
+Terms & conditions policy is present and appropriate given the context. The terms & conditions policy is linked in the footer and works correctly. The terms & conditions policy page passes all validations - HTML5, CSS3, and WCAG 2.1, level AA.
+5 pts

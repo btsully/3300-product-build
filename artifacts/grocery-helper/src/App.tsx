@@ -9,7 +9,12 @@ import List from "@/pages/list";
 import SearchPage from "@/pages/search";
 import HistoryPage from "@/pages/history";
 import InfoPage from "@/pages/info";
+import CookiePolicyPage from "@/pages/cookie-policy";
+import PrivacyPolicyPage from "@/pages/privacy-policy";
+import TermsPage from "@/pages/terms";
 import NotFound from "@/pages/not-found";
+import Footer from "@/components/footer";
+import CookieBanner from "@/components/cookie-banner";
 
 const queryClient = new QueryClient();
 
@@ -25,7 +30,7 @@ function Navigation() {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-background border-t border-border p-2 pb-safe md:top-0 md:bottom-auto md:border-t-0 md:border-b md:px-6 md:py-4 z-50">
+    <nav className="fixed bottom-0 left-0 right-0 bg-background border-t border-border p-2 pb-safe md:top-0 md:bottom-auto md:border-t-0 md:border-b md:px-6 md:py-4 z-50" aria-label="Main navigation">
       <div className="max-w-screen-md mx-auto flex justify-between items-center">
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -34,13 +39,14 @@ function Navigation() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={isActive ? "page" : undefined}
               className={`flex flex-col items-center justify-center p-2 rounded-xl transition-all duration-200 hover-elevate ${
                 isActive
                   ? "text-primary bg-primary/10"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              <Icon className="w-6 h-6 mb-1 md:w-5 md:h-5 md:mb-0 md:mr-2" />
+              <Icon className="w-6 h-6 mb-1 md:w-5 md:h-5 md:mb-0 md:mr-2" aria-hidden="true" />
               <span className="text-[10px] font-medium md:text-sm">{item.label}</span>
             </Link>
           );
@@ -54,16 +60,21 @@ function Router() {
   return (
     <div className="min-h-[100dvh] flex flex-col md:pt-16 pb-20 md:pb-0 bg-background text-foreground font-sans">
       <Navigation />
-      <main className="flex-1 w-full max-w-screen-md mx-auto p-4 md:p-6 animate-in fade-in zoom-in-95 duration-300">
+      <main className="flex-1 w-full max-w-screen-md mx-auto p-4 md:p-6 animate-in fade-in zoom-in-95 duration-300" id="main-content">
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/list" component={List} />
           <Route path="/search" component={SearchPage} />
           <Route path="/history" component={HistoryPage} />
           <Route path="/info" component={InfoPage} />
+          <Route path="/cookie-policy" component={CookiePolicyPage} />
+          <Route path="/privacy" component={PrivacyPolicyPage} />
+          <Route path="/terms" component={TermsPage} />
           <Route component={NotFound} />
         </Switch>
       </main>
+      <Footer />
+      <CookieBanner />
     </div>
   );
 }
