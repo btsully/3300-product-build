@@ -40,13 +40,13 @@ export default function SearchPage() {
   const isItemInList = (id: string) => list.some(item => item.productId === id);
 
   return (
-    <div className="space-y-6 h-full flex flex-col">
-      <header>
-        <h1 className="text-2xl font-bold tracking-tight text-foreground font-serif">Catalog</h1>
-        <p className="text-sm text-muted-foreground mt-1">Search realistic Iowa City Hy-Vee prices</p>
+    <div className="space-y-8 h-full flex flex-col">
+      <header className="pt-2">
+        <h1 className="text-3xl font-bold tracking-tight text-foreground font-serif">Catalog</h1>
+        <p className="text-sm text-muted-foreground mt-2">Search realistic Iowa City Hy-Vee prices</p>
       </header>
 
-      <div className="sticky top-0 z-10 bg-background/95 backdrop-blur pb-4 pt-2 -mx-4 px-4 md:mx-0 md:px-0 space-y-4">
+      <div className="sticky top-0 z-10 bg-background/95 backdrop-blur pb-4 pt-2 -mx-5 px-5 md:-mx-8 md:px-8 space-y-4">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
           <Input 
@@ -80,8 +80,8 @@ export default function SearchPage() {
 
       <div className="flex-1 space-y-3 pb-8">
         {filteredCatalog.length === 0 ? (
-          <div className="text-center py-12 text-muted-foreground">
-            <Search className="w-12 h-12 mx-auto mb-3 opacity-20" />
+          <div className="text-center py-16 text-muted-foreground">
+            <Search className="w-12 h-12 mx-auto mb-4 opacity-20" />
             <p>No items found matching your search.</p>
             <Button variant="link" onClick={() => { setQuery(""); setActiveCategory(null); }}>
               Clear search
@@ -93,7 +93,7 @@ export default function SearchPage() {
             return (
               <Card key={item.id} className="overflow-hidden hover-elevate transition-all border-border/50">
                 <CardContent className="p-0">
-                  <div className="flex items-center p-3 sm:p-4 gap-3">
+                  <div className="flex items-center p-4 sm:p-5 gap-4">
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
                         <h3 className="font-semibold text-foreground truncate">{item.name}</h3>

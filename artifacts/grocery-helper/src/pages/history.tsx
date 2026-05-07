@@ -28,10 +28,10 @@ export default function HistoryPage() {
   const avgVariance = history.reduce((sum, trip) => sum + trip.variancePercent, 0) / history.length;
 
   return (
-    <div className="space-y-6 pb-12">
-      <header>
-        <h1 className="text-2xl font-bold tracking-tight text-foreground font-serif">Trip History</h1>
-        <p className="text-sm text-muted-foreground mt-1">Learn from past predictions</p>
+    <div className="space-y-8 pb-12">
+      <header className="pt-2">
+        <h1 className="text-3xl font-bold tracking-tight text-foreground font-serif">Trip History</h1>
+        <p className="text-sm text-muted-foreground mt-2">Learn from past predictions</p>
       </header>
 
       <div className="grid grid-cols-2 gap-4 mb-6">

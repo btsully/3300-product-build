@@ -41,16 +41,16 @@ export default function Home() {
   };
 
   return (
-    <div className="space-y-6">
-      <header className="flex items-center justify-between">
+    <div className="space-y-8">
+      <header className="flex items-center justify-between pt-2">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-foreground font-serif">Grocery Helper</h1>
-          <p className="text-sm text-muted-foreground mt-1">Your Iowa City Hy-Vee planner</p>
+          <h1 className="text-3xl font-bold tracking-tight text-foreground font-serif">Grocery Helper</h1>
+          <p className="text-sm text-muted-foreground mt-2">Your Iowa City Hy-Vee planner</p>
         </div>
       </header>
 
       <Card className={`border-2 transition-colors duration-300 ${isOverBudget ? 'border-destructive bg-destructive/5' : isWarning ? 'border-amber-500 bg-amber-50' : 'border-border'}`}>
-        <CardHeader className="pb-2">
+        <CardHeader className="pb-2 pt-5 px-6">
           <div className="flex justify-between items-start">
             <div>
               <CardTitle className="text-lg font-medium text-muted-foreground uppercase tracking-wider text-xs">Trip Budget</CardTitle>
@@ -83,7 +83,7 @@ export default function Home() {
             </div>
           </div>
         </CardHeader>
-        <CardContent>
+        <CardContent className="px-6 pb-6">
           <div className="mt-4 space-y-2">
             <div className="flex justify-between text-sm font-medium">
               <span className={isOverBudget ? 'text-destructive font-bold' : isWarning ? 'text-amber-600 font-bold' : 'text-muted-foreground'}>
@@ -117,9 +117,9 @@ export default function Home() {
       <div className="grid grid-cols-2 gap-4">
         <Link href="/search">
           <Card className="hover-elevate cursor-pointer transition-colors hover:border-primary">
-            <CardContent className="p-6 flex flex-col items-center text-center justify-center h-full">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3 text-primary">
-                <Search className="w-6 h-6" />
+            <CardContent className="p-7 flex flex-col items-center text-center justify-center h-full">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                <Search className="w-7 h-7" />
               </div>
               <h3 className="font-semibold mb-1">Find Items</h3>
               <p className="text-xs text-muted-foreground">Search the catalog</p>
@@ -129,9 +129,9 @@ export default function Home() {
 
         <Link href="/list">
           <Card className="hover-elevate cursor-pointer transition-colors hover:border-primary relative overflow-hidden">
-            <CardContent className="p-6 flex flex-col items-center text-center justify-center h-full">
-              <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-3 text-secondary-foreground">
-                <ShoppingCart className="w-6 h-6" />
+            <CardContent className="p-7 flex flex-col items-center text-center justify-center h-full">
+              <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center mb-4 text-secondary-foreground">
+                <ShoppingCart className="w-7 h-7" />
               </div>
               <h3 className="font-semibold mb-1">View List</h3>
               <p className="text-xs text-muted-foreground">{list.length} items planned</p>
