@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "fW9vP58Ga_xn-1lroRBRC"
+uri = "file://artifacts/grocery-helper/public/opengraph.jpg"
+type = "image"
+title = "New OG Preview Image"
