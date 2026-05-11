@@ -1,6 +1,6 @@
 # Grocery Helper — Iowa City Hy-Vee Budget Planner
 
-A budget-first grocery planning web app built for Iowa City Hy-Vee shoppers. Created as the semester product build project for **BAIS 3300 — Business Application Development** at the **University of Iowa**.
+A budget-first grocery planning web app built for Iowa City Hy-Vee shoppers. Created as the semester product build project for **BAIS 3300 — Digital Product Management** at the **University of Iowa**.
 
 **Live site:** [brendantsullivan.site](https://brendantsullivan.site)
 
